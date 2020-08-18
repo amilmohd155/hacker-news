@@ -5,6 +5,7 @@ import ListItem from "./ListItem";
 
 function App() {
   const [items, setItems] = useState({ hits: [] });
+  const [page, setpage] = useState(0);
 
   const fetchData = async (i) => {
     const apiCall = await fetch(
@@ -22,8 +23,8 @@ function App() {
   };
 
   useEffect(() => {
-    fetchData(0);
-  }, []);
+    fetchData(page);
+  }, [page]);
 
   return (
     <div className="App">
@@ -88,17 +89,27 @@ function App() {
             <tr className="space10"></tr>
             <tr>
               <td>
-                <ListItem items={items.hits} />
+                <table>
+                  <ListItem items={items.hits}/>
+                </table>
               </td>
             </tr>
             <tr className="space5"></tr>
             <tr>
-              <td style={{ padding: "0px 25px", color: "#BDBDBD" }}>More</td>
+              <td
+                onClick={() => {
+                  setpage(page + 1);
+                  fetchData(page);
+                }}
+                style={{ padding: "0px 25px", color: "#BDBDBD" }}
+              >
+                More
+              </td>
             </tr>
             <tr className="space10" />
             <tr>
               <td>
-                <table style={{width: "100%"}}>
+                <table style={{ width: "100%" }}>
                   <tbody>
                     <tr>
                       <td style={{ backgroundColor: "#ff6600" }}></td>
