@@ -98,7 +98,7 @@ function App() {
             <tr className="space10" />
             <tr>
               <td>
-                <table>
+                <table style={{width: "100%"}}>
                   <tbody>
                     <tr>
                       <td style={{ backgroundColor: "#ff6600" }}></td>

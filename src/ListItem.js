@@ -5,18 +5,7 @@ import ReactTimeAgo from "react-time-ago";
 class ListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      currentUpvotes: [0, 0],
-    };
-    this.handleUpvote = this.handleUpvote.bind(this);
-  }
-
-  handleUpvote(event, id) {
-    this.setState({ currentUpvotes: this.state.currentUpvotes + 1 });
-    console.log(this.state.currentUpvotes);
-    if (localStorage.getItem("points") === undefined) {
-      localStorage.setItem("points", JSON.stringify());
-    }
+    this.state = {};
   }
 
   render() {
@@ -54,7 +43,7 @@ class ListItem extends React.Component {
             <td>
               <center>
                 <span style={{ cursor: "pointer" }}>
-                  <div className="upvote" onClick={props.handleUpvote} />
+                  <div className="upvote" />
                 </span>
               </center>
             </td>
@@ -103,7 +92,6 @@ class ListItem extends React.Component {
       <table>
         <ListItemsFunction
           items={this.props.items}
-          handleUpvote={this.handleUpvote}
         />
       </table>
     );
