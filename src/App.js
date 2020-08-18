@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "./y18.gif";
 import "./App.css";
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 
 function App() {
   return (
     <div className="App">
       <center>
-        <table style={{width:"65%", backgroundColor:"#f6f6ef"}}>
+        <table style={{ width: "65%", backgroundColor: "#f6f6ef" }}>
           <tbody>
             <tr className="header-tr">
               <td>
@@ -15,7 +16,7 @@ function App() {
                     <tr>
                       <td className="logo-td">
                         <a href="#">
-                          <img className="logo" src={logo} width={18}/>
+                          <img className="logo" src={logo} width={18} />
                         </a>
                       </td>
                       <td>
@@ -41,19 +42,19 @@ function App() {
                           <a href="#">Past</a>
                         </span>
                         <span className="subtitle">
-                        <a href="#">Comments</a>
+                          <a href="#">Comments</a>
                         </span>
                         <span className="subtitle">
-                        <a href="#">Ask</a>
+                          <a href="#">Ask</a>
                         </span>
                         <span className="subtitle">
-                        <a href="#">Show</a>
+                          <a href="#">Show</a>
                         </span>
                         <span className="subtitle">
-                        <a href="#">Jobs</a>
+                          <a href="#">Jobs</a>
                         </span>
                         <span className="subtitle">
-                        <a href="#">Show</a>
+                          <a href="#">Show</a>
                         </span>
                       </td>
                     </tr>
@@ -66,7 +67,55 @@ function App() {
               <td>
                 <table>
                   <tbody>
-                    
+                    <tr>
+                      <td>
+                        <span style={{padding: "2px"}}>1</span>
+                      </td>
+                      <td style={{width: "100%"}}>
+                        <span>
+                          <a href="#">
+                            I fear App Review is getting too powerful (2015)
+                            [pdf]
+                          </a>
+                          <span style={{color: "#9E9E9E"}}>
+                            {" ("}
+                            <a href="#" style={{color: "#9E9E9E"}}>
+                              <span>house.gov</span>
+                            </a>
+                            {") "}
+                          </span>
+                        </span>
+                      </td>
+                      <td>
+                        <center>
+                          <a href="">
+                            <div className="upvote"/>
+                          </a>
+                        </center>
+                      </td>
+                    </tr>
+                    <tr className="subtext">
+                      <td colSpan="1"></td>
+                      <td>
+                        {"by "}
+                        <a href="">atarian</a>
+                        <span>
+                          <a href="">11 hours ago</a>
+                        </span>
+                        {" | "}
+                        <span className="hide-span">
+                          <a href="">hide</a>
+                        </span>
+                        {" | "}
+                        <span>
+                          <a href="">274&nbsp;comments</a>
+                        </span>
+                      </td>
+                      <td>
+                        <span>817</span>
+                      </td>
+                    </tr>
+                    <tr className="space5"></tr>
                   </tbody>
                 </table>
               </td>
